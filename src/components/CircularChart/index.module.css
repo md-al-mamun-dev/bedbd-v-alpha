@@ -1,0 +1,44 @@
+.chart_body{
+    /* height: 320px;
+    width: 264px; */
+}
+
+.chart {
+    margin: 1rem;
+    text-align: center;
+  }
+  
+  .chart > svg {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .circleBackground {
+    fill: none;
+    stroke-width: 1px;
+    stroke: #305556;
+  }
+  
+  .circleForeground {
+    fill: none;
+    stroke-linecap: round;
+    stroke: #79be9b; /* Change color based on the chart */
+  }
+  
+  /* Chart Configurations */
+  .chartTwo svg {
+    stroke-width: 15px;
+    stroke: #d0f09e;
+  }
+  
+  .chartThree svg {
+    stroke-width: 25px;
+    stroke: #389967;
+  }
+  
+  /* Label Styles */
+  /* figcaption {
+    color: #c6e8d7;
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+  } */

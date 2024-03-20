@@ -1,0 +1,18 @@
+.btn_group{
+    display: flex;
+    gap: var(--size-500);
+}
+.btn_group > .btn{
+    display: flex;
+    gap: var(--size-310);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--clr-neutral-500);
+    font-size: var(--size-325);
+    font-weight: var(--fw-semi-bold);
+    line-height: 20px;
+}
+.btn_icon{
+    opacity: 0.7;
+}

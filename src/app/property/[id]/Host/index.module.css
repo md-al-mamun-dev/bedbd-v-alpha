@@ -1,0 +1,36 @@
+.host{
+    width: 100%;
+    padding-top: 20px;
+    max-width: 750px;
+}
+
+.host_image{
+    border-radius: 50%;
+}
+
+.host_name{
+    font-size: var(--size-350);
+    font-weight: var(--fw-semi-bold);
+}
+.host_badges{
+    display: flex;
+    gap: var(--size-250);
+}
+.host_badges > .badge_item{
+    display: flex;
+    gap: var(--size-080);
+}
+.host_badges > .badge_item > .badge_icon{
+    height: var(--size-350);
+    width: var(--size-350);
+}
+
+.host_title_badge{
+    margin-bottom: var(--size-310);
+}
+.special_points{
+    margin-top: var(--size-700);
+    margin-bottom: var(--size-700);
+
+}
+

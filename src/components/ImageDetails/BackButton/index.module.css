@@ -1,0 +1,11 @@
+.back_button{
+    display: flex;
+    align-items: center;
+    gap: var(--size-080);
+    font-size: var(--fs-500);
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-600);
+    background: none;
+    border: none;
+    cursor: pointer; 
+}

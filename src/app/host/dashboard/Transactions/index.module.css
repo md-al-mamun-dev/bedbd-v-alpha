@@ -1,0 +1,12 @@
+.balanceTxt{
+    width: max-content;
+    color: var(--clr-neutral-400);
+    font-weight: var(--fw-regular-dark);
+    font-size: var(--fs-300);
+}
+
+.balanceTxt > span{
+    margin-left: 6px;
+    color: var(--clr-neutral-700);
+    font-weight: var(--fw-semi-bold);
+}

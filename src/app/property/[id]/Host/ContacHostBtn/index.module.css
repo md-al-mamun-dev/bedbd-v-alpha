@@ -1,0 +1,13 @@
+.contact_host_btn{
+    font-size: var(--fs-500);
+    font-weight: var(--fw-semi-bold);
+    padding: var(--size-250) var(--size-850);
+
+    width: 315px;
+    border-radius: var(--size-700);
+    color: var(--clr-primary-400);
+    border: 1px solid var(--clr-primary-400);
+    background: none;
+    cursor: pointer;
+
+}

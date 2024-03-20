@@ -1,0 +1,23 @@
+.btn{
+    color: var(--clr-neutral-600);
+    font-size: var(--size-325);
+    font-weight: var(--fw-regular);
+    line-height: var(--size-425);
+    margin-top: var(--size-425);
+    background: none;
+    cursor: pointer;  
+}
+
+.show_all_btn{    
+    padding: var(--size-310) var(--size-400);
+    border-radius: var(--size-060);
+    border: 1px solid var(--clr-neutral-400);
+}
+
+.show_less{
+    border: none;
+    background: none;
+    text-decoration: underline;
+}
+
+

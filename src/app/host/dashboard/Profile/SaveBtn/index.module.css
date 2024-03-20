@@ -1,0 +1,12 @@
+.save_btn{
+    width: 285px;
+    height: 48px;
+    text-align: center;
+    background: var(--clr-primary-400);
+    color: var(--clr-neutral-000);
+    border-radius: var(--size-080);
+    font-size: var(--fs-400);
+}
+.save_btn:hover{
+    box-shadow: 0px 0px 8px 0px #FF8515;
+}

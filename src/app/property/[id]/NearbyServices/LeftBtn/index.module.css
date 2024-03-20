@@ -1,0 +1,33 @@
+.left_btn_wrapper{
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: +10;
+    
+}
+.left_btn_wrapper > button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: var(--clr-neutral-300);
+    visibility: hidden;
+}
+.left_btn_wrapper:hover > button{
+    visibility: visible;
+}
+
+.left_btn_wrapper > button > .icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

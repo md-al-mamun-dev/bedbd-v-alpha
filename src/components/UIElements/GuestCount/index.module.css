@@ -1,0 +1,76 @@
+.guests_count{
+    position: absolute;
+    min-width: 450px;
+    top: 58px;
+    right: 60px;
+    border-radius: 13px;
+    background: white;
+    padding: var(--size-700);
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+}
+
+.guests_count_item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.guests_count_item:not(:last-child){
+    padding-bottom:var(--size-350) ;
+}
+.guests_count_item:not(:first-child){
+    padding-top:var(--size-350) ;
+}
+
+.guests_count_item:not(:last-child)::after{
+    content: "";
+    /* border: 1px solid red; */
+    position: absolute;
+    bottom:-1px;
+    width: 95%;
+    height: 1px;
+    background: var(--clr-neutral-025);
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+
+.guests_count_item> .level > .level_name{
+    font-size: var(--fs-200);
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-neutral-600);
+}
+.guests_count_item> .level > .level_info{
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular-dark);
+    color: var(--clr-neutral-300);
+}
+.guests_count_item > .counter{
+    display: flex;
+    align-items: center;
+    gap: var(--size-325) ;
+}
+.guests_count_item > .counter > .count_value{
+    font-size: var(--fs-500);
+    font-weight: var(--fw-regular-dark);
+    /* border: 1px solid red; */
+    width: 40px;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+
+.counter_icon{
+    color: var(--clr-neutral-300);
+}
+.counter_icon_disabled{
+    color: var(--clr-neutral-050);
+    cursor: not-allowed;
+}
+
+.counter_icon:hover{
+    cursor: pointer;
+    color: var(--clr-neutral-600);
+}

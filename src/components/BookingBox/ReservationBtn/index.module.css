@@ -1,0 +1,25 @@
+.btn_wrapper{
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.reserve_now_btn{
+    height: 56px;
+    width: 370px;
+    background: var(--clr-primary-400);
+    border-radius: var(--size-700);
+    border: none;
+    outline: none;
+    color: white;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular-dark);
+    line-height: 24px;
+    text-align: center;
+    padding: auto;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+
+
+

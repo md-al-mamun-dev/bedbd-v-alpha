@@ -1,0 +1,30 @@
+
+.amenities{
+    max-width: 600px;
+}
+.amenities > .title{
+    color: var(--clr-neutral-700);
+    font-size: var(--fs-650);
+    font-weight: var(--fw-semi-bold);
+    line-height: var(--size-425);
+    margin-bottom: var(--size-350);
+}
+.amenities > div{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.amenity_item{
+    display: flex;
+    gap: 24px ;
+    padding-top: var(--size-150);
+    padding-bottom: var(--size-150);
+}
+
+.amenities_title{
+    font-size: var(--fs-500);
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-700);
+    line-height: var(--size-425);
+}

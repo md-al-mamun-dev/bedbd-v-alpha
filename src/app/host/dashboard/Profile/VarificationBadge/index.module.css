@@ -1,0 +1,12 @@
+.not_varified_msg::before{
+    content: "  ";
+    
+    width: 1px;
+    height: 16px;
+    background: var(--clr-neutral-300);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -8px;
+    cursor: pointer;
+}

@@ -1,0 +1,25 @@
+.show_btn{
+    color: var(--clr-neutral-500);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular-dark);
+    padding: var(--size-310) var(--size-950);
+    /* width: 270px;
+    height: 56px; */
+    border: 1px solid #484848;
+    border-radius: var(--size-060);
+    background: transparent;
+    text-align: center;
+    max-width: fit-content;
+    cursor: pointer;
+}
+
+.hide_btn{
+    border: none;
+    background: transparent;
+    color: var(--clr-neutral-500);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular-dark);
+    text-decoration: underline;
+    max-width: fit-content;
+    cursor: pointer;
+}

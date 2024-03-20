@@ -1,0 +1,132 @@
+
+
+.profile{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-areas:    "cover-image cover-image"
+                            "about-host  info-details";
+    gap: 24px;
+    padding: 48px 32px 24px 32px;
+}
+.cover_img_wrapper{
+    width: 100%;
+    height: 264px;
+    position: relative;
+    background: var(--clr-secondary-100);
+    border-radius: var(--size-080);
+    grid-area: cover-image;
+}
+.cover_img_wrapper > button{
+    padding-top: 12px;
+    width: 210px;
+    height: 48px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.about_host_section{
+    grid-area: about-host;
+}
+.about_host_section > button{
+    width: 164px;
+    height: 40px;
+}
+.about_host_txt{
+    width: 312px;
+    height: 332px;
+    border-radius: 8px;
+    padding: 24px 16px;
+}
+.profile_info_details{
+    grid-area: info-details;
+    background: var(--clr-secondary-100);
+    border-radius: var(--size-080);
+    width: 100%;
+    padding: var(--fs-950) var(--fs-650);
+    position: relative;
+}
+
+.profile_info_details > button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: var(--size-700);
+}
+.user_info_form{
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+                        "user-id user-id"
+                        "first-name  last-name"
+                        "phone  email"
+                        "id-no id-no"
+                        "address-1 address-1"
+                        "address-2 address-2";
+}
+
+.user_info_form > .form_item{
+    width: 100%;
+    border: 1px solid var(--clr-neutral-200);
+    color: var(--clr-neutral-600);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular-dark);
+    border-radius: var(--size-080);
+}
+.user_info_form > .form_item:first-child{
+
+    padding: var(--size-150) var(--size-310);
+    background: transparent;
+    border-radius: var(--size-080);
+    color: var(--clr-neutral-300);
+}
+.user_info_form > .form_item > input{
+    width: 100%;
+    border: none;
+    padding: var(--size-150) var(--size-310);
+    background: transparent;
+    border-radius: var(--size-080);
+}
+
+.user_info_form > .form_item > input::placeholder,
+.user_info_form > .form_item > input:read-only{
+    font-size: var(--fs-400);
+    color: var(--clr-neutral-400);
+    line-height: var(--size-350);
+}
+
+.form_phone > svg,
+.form_email > svg{
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+}
+
+.form_id{
+    grid-area: user-id;
+}
+
+.form_first_name{
+    grid-area: first-name;
+}
+.form_last_name{
+    grid-area: last-name;
+}
+.form_phone{
+    grid-area: phone ;
+}
+.form_email{
+    grid-area: email;
+}
+.form_id_no{
+    grid-area: id-no;
+}
+.form_present_address{
+    grid-area: address-1;
+}
+.form_parmanent_address{
+    grid-area: address-2;
+}
+

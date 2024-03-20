@@ -1,0 +1,90 @@
+
+
+
+
+
+.slider{
+    /* border: 1px solid red; */
+
+    position: relative;
+    /* aspect-ratio: 396 / 302 ; */
+    width: clamp(290px, -2.1496rem + 33.5463vw, 395px);
+    height: clamp(178px, -1.2328rem + 20.4473vw, 242px);
+    /* width: 100%;
+    aspect-ratio: 395/242;
+    height: 100%; */
+
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden
+
+
+}
+.images{
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    height: 100%;
+    width: 100%;
+    /* display: grid; */
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    
+    /* width: max-content; */
+}
+.images::-webkit-scrollbar {
+    display: none;
+}
+.images::-webkit-scrollbar-track {
+    display: none;
+ }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.images {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.img_wrapper{
+    position: relative;
+    /* border: 1px solid red; */
+    /* height: 100%; */
+    width: 395px;
+    /* width: minmax(290px, 395px); */
+
+    max-width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    scroll-snap-align: center;
+}
+
+.slider > img{
+    position: absolute;
+    border-radius: 8px;
+}
+
+.slider_nav{
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* border: 1px solid red; */
+    width: fit-content;
+    display: flex;
+    gap: 14px;
+    background: var(--clr-neutral-800-a_50);
+    padding: 3px 6px;
+    border-radius: 12px;
+}
+.slider_nav > button{
+    border: none;
+    padding: 0;
+    background: transparent;    
+}
+
+._dot{
+    height: 10px;
+    width: 10px;
+    background: var(--clr-neutral-300);
+    border-radius: 50%;
+}

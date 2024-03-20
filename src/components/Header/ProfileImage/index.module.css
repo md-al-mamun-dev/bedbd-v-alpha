@@ -1,0 +1,12 @@
+@media (max-width:897px) {
+    .profile_image{
+        scale: 1.5;
+        margin-bottom: var(--size-500);
+    }    
+  }
+
+.login_btn{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.title{
+   color: var(--clr-neutral-700);
+   font-size: var(--size-350);
+   font-weight: var(--fw-semi-bold);
+   line-height: var(--size-425);
+   margin-bottom: var(--size-350);
+}
+.rules {
+    font-size: var(--size-325);
+    font-weight: var(--fw-regular);
+    line-height: var(--size-425);
+    color: var(--clr-neutral-700);
+
+    display: grid;
+    gap: var(--size-150);
+}
+
+.rules > div > div > span{
+    font-weight: var(--fw-regular-dark);
+    line-height: var(--size-425);
+    color: var(--clr-neutral-800);
+}

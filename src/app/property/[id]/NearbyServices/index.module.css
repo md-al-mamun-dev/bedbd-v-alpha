@@ -1,0 +1,27 @@
+.services{
+    display: flex;
+    gap: var(--size-350);
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    padding: var(--size-335);
+    background: transparent;
+    position: relative;
+}
+.services::-webkit-scrollbar {
+    display: none;
+}
+.services::-webkit-scrollbar-track {
+    display: none;
+}
+
+.services > .services_item{
+    min-width: 300px;
+    height: 110px;
+    padding: var(--size-450) var(--size-350);
+    border-radius: var(--size-060);
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    box-shadow: 0px 0px 8px 0px rgba(194, 198, 204, 0.50);
+}
+

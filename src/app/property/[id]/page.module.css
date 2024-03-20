@@ -1,0 +1,134 @@
+.property_details{
+    margin-top: var(--size-700);
+}
+
+.property_details > div:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(1.25rem, -3.75rem + 7.8125vw, 2.5rem);
+    width: 100%;
+}
+
+
+
+.geographical_map{
+    width: 100%;
+    /* max-width: 490px; */
+    /* width: fit-content; */
+    height: clamp(26.875rem, 8.375rem + 28.9063vw, 31.5rem);
+    max-height: 100%;
+    /* background: gray; */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+
+@media(min-width:1024px){
+    .geographical_map{
+        /* width: clamp(21.875rem, -13.125rem + 54.6875vw, 30.625rem); */
+        /* max-width: 30%; */
+        
+        max-width: 38% ;
+    }
+    .property_details > div:first-child{
+        flex-direction: row;
+    }
+}
+@media(min-width:1280px){
+    .geographical_map{
+        height: clamp(31.5rem, -21.3rem + 66vw, 33.5625rem);
+    }
+}
+
+
+
+
+.property_descriptions{
+    width: 100%;
+    /* min-height: 200vh; */
+    display: flex;
+    gap: clamp(1.25rem, -3.75rem + 7.8125vw, 2.5rem);
+
+}
+
+
+.property_descriptions > .attributes_details{
+    /* width: clamp(43.875rem, -20.125rem + 80vw, 46.875rem); */
+    /* max-width: 750px; */
+
+    /* max-width: 702px; */
+    /* max-width: 58.73%; */
+    width: 100%;
+    /* height: 100%; */
+}
+@media(min-width:1024px){
+    .property_descriptions > .attributes_details{
+        width: 58.73%;
+    }
+}
+@media(min-width:1280px){
+    .property_descriptions > .attributes_details{
+        width: clamp(43.875rem, -20.125rem + 80vw, 46.875rem);
+    }
+}
+
+.property_descriptions > .attributes_details > *{
+    margin-top: var(--size-450);
+    margin-bottom: var(--size-450);
+
+}
+
+.property_type{
+    font-size: var(--fs-650);
+    font-weight: var(--fw-semi-bold);
+    line-height: var(--fs-700);
+    color: var(--clr-neutral-500);
+}
+/* .attributes_details > div > .btn_group{
+    display: flex;
+    gap: var(--size-500);
+} */
+
+/* .attributes_details > div > .btn_group > .btn{
+    display: flex;
+    gap: var(--size-310);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--clr-neutral-500);
+    font-size: var(--size-325);
+    font-weight: var(--fw-semi-bold);
+    line-height: 20px;
+}
+
+.btn_icon{
+    opacity: 0.7;
+} */
+
+.property_title{
+    font-size: var(--size-425);
+    font-weight: var(--fw-semi-bold);
+    line-height: 36px;
+    color: var(--clr-neutral-600);
+    margin-bottom: var(--size-080);
+}
+
+.property_subtitle{
+    color: var(--clr-neutral-400);
+    font-size: var(--size-325);
+    line-height: 28px;
+    font-weight: var(--fw-regular);
+    letter-spacing: 0.36px;
+}
+
+.reservation_section{
+    width: 100%;
+    /* max-width: 41.25%; */
+    min-height: 100%;
+    background: transparent;
+    overflow: visible;
+    padding-top: 100px;
+    padding-bottom: var(--size-350);
+}

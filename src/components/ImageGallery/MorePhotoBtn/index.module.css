@@ -1,0 +1,32 @@
+.more_photo_btn{
+    position: absolute;
+    bottom: var(--size-200);
+    right: var(--size-250);
+    display: flex;
+    padding: var(--size-060) var(--size-150);
+    border-radius: var(--size-080);
+    border: none;
+    background: var(--clr-neutral-1000-a_60);
+    color: var(--clr-neutral-000);
+    /* border: 1px solid red; */
+    z-index: 10;
+    font-size: var(--fs-950);
+    font-weight: var(--fw-bold) ;
+    display: flex;
+    align-items: center;
+    gap: var(--size-150);
+    cursor: pointer;
+}
+
+.more_photo_btn > div{
+    font-size: var(--size-250);
+    text-align: left;
+    font-weight: var(--fw-semi-bold) ;
+
+}
+
+.more_photo_btn > div > div{
+    font-size: var(--fs-500);
+    font-weight: var(--fw-bold) ;
+
+}

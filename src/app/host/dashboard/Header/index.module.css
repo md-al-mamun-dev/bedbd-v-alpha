@@ -1,0 +1,22 @@
+.header{
+    height: 80px;
+    width: 100%;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+}
+.header > div{
+    height: 100%;
+}
+.logo_wrapper > img {
+    width: 62px;
+    height: 32px;
+}
+.balanceTxt{
+    color: var(--clr-neutral-400);
+    font-size: var(--fs-300);
+    font-weight: var(--fw-regular-dark);
+}
+.balanceTxt > span{
+    margin-left: var(--size-060);
+    color: var(--clr-secondary-400);
+    font-weight: var(--fw-semi-bold);
+}

@@ -1,0 +1,8 @@
+.location_circle{
+    width:150px;
+    height: 150px; 
+    background: var(--clr-primary-400-a_010);
+    border-radius: 50%;
+    /* opacity: 0.3; */
+    border: 1px solid var(--clr-primary-400);
+}

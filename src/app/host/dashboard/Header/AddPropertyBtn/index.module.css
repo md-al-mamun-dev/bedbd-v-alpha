@@ -1,0 +1,11 @@
+.btn{
+    background: transparent;
+    border: 1px solid var(--clr-primary-400);
+    color: var(--clr-primary-400);
+    padding: var(--size-150) var(--size-450);
+    border-radius: var(--size-060);
+    font-size: var(--size-310);
+    font-weight: var(--fw-regular-dark);
+    cursor: pointer;
+    /* font-family: Poppins; */
+}
