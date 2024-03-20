@@ -9,4 +9,5 @@ export const appwriteClient = new Client()
             .setLocale('en')
 
 export const databases = new Databases(appwriteClient)
+export const account = new Account(appwriteClient)
 export default appwriteClient
