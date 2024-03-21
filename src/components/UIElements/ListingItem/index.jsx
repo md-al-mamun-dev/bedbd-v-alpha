@@ -4,60 +4,68 @@ import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import ImageSlider from './ImageSlider'
 import FavouriteBtn from './ImageSlider/FavouriteBtn'
+import storageService from '@/service/StorageService'
 
 
-const ListingItem = ({}) => {
+const ListingItem = ({data}) => {
 
-  const images = [
-    {
-        imageTitle:'Living room',
-        imageUrl: '/images/4eabfbe482568e48247e3a0119a702ca.jpeg',
-        content:'',
-        tags:' ' 
-    },
-    {
-        imageTitle:'Decoration',
-        imageUrl: '/images/dab98b8e77b48c65d7c3e2032f00af6c.jpeg',
-        content:'',
-        tags:' ' 
-    },
-    {
-        imageTitle:'Bedroom',
-        imageUrl: '/images/edd4ba000bdfa85be11654df3de4ccf3.jpeg',
-        content:'',
-        tags:' ' 
-    },
-    {
-        imageTitle:'Dining room',
-        imageUrl: '/images/ff4537db926dfeb0067a37eecda96e8f.jpeg',
-        content:'',
-        tags:' ' 
-    },
-    {
-        imageTitle:'front view',
-        imageUrl: '/images/edd4ba000bdfa85be11654df3de4ccf3.jpeg',
-        content:'',
-        tags:' ' 
-    },
-    {
-        imageTitle:'front view',
-        imageUrl: '/images/ff4537db926dfeb0067a37eecda96e8f.jpeg',
-        content:'',
-        tags:' ' 
-    },
-    {
-        imageTitle:'front view',
-        imageUrl: '/images/edd4ba000bdfa85be11654df3de4ccf3.jpeg',
-        content:'',
-        tags:' ' 
-    },
-    {
-        imageTitle:'front view',
-        imageUrl: '/images/ff4537db926dfeb0067a37eecda96e8f.jpeg',
-        content:'',
-        tags:' ' 
-    }
-  ]
+console.log(data)
+
+const images = data['images'].map(imgId=> storageService.getPropertyImage(imgId))
+  
+
+// console.log(images)
+
+  // const images = [
+  //   {
+  //       imageTitle:'Living room',
+  //       imageUrl: '/images/4eabfbe482568e48247e3a0119a702ca.jpeg',
+  //       content:'',
+  //       tags:' ' 
+  //   },
+  //   {
+  //       imageTitle:'Decoration',
+  //       imageUrl: '/images/dab98b8e77b48c65d7c3e2032f00af6c.jpeg',
+  //       content:'',
+  //       tags:' ' 
+  //   },
+  //   {
+  //       imageTitle:'Bedroom',
+  //       imageUrl: '/images/edd4ba000bdfa85be11654df3de4ccf3.jpeg',
+  //       content:'',
+  //       tags:' ' 
+  //   },
+  //   {
+  //       imageTitle:'Dining room',
+  //       imageUrl: '/images/ff4537db926dfeb0067a37eecda96e8f.jpeg',
+  //       content:'',
+  //       tags:' ' 
+  //   },
+  //   {
+  //       imageTitle:'front view',
+  //       imageUrl: '/images/edd4ba000bdfa85be11654df3de4ccf3.jpeg',
+  //       content:'',
+  //       tags:' ' 
+  //   },
+  //   {
+  //       imageTitle:'front view',
+  //       imageUrl: '/images/ff4537db926dfeb0067a37eecda96e8f.jpeg',
+  //       content:'',
+  //       tags:' ' 
+  //   },
+  //   {
+  //       imageTitle:'front view',
+  //       imageUrl: '/images/edd4ba000bdfa85be11654df3de4ccf3.jpeg',
+  //       content:'',
+  //       tags:' ' 
+  //   },
+  //   {
+  //       imageTitle:'front view',
+  //       imageUrl: '/images/ff4537db926dfeb0067a37eecda96e8f.jpeg',
+  //       content:'',
+  //       tags:' ' 
+  //   }
+  // ]
 
 
 
@@ -65,7 +73,7 @@ const ListingItem = ({}) => {
   return (
     <div className={`${styles.listing_item} z-index-0`} >
         
-        <ImageSlider images={images} />
+        <ImageSlider data ={images}/>
 
         
         <div className={`${styles.item_info}`}>

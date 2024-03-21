@@ -4,9 +4,9 @@ import Image from 'next/image'
 import ListingItem from '../UIElements/ListingItem'
 
 
-export default function ImageGallery(){
+export default function ImageGallery({data}){
 
-  // const data = await getData()
+console.log(data)
   // console.log(data)
 
   const galleryTitle = 'Top Rated Properties'
@@ -22,11 +22,9 @@ export default function ImageGallery(){
                         </div>}
 
         <div className={`${styles.listing_gallery} `}>
-          <ListingItem />
-          <ListingItem />
-          <ListingItem />
-          <ListingItem />
-
+          {
+            data.map(item => <ListingItem data={item}/>)
+          }
         </div>
       </div>      
     </div>

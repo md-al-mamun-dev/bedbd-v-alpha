@@ -8,29 +8,10 @@ import ListingGallery from '@/components/ListingGallery'
 import UserEntrance from '@/components/UIElements/UserEntrance/PhoneInput'
 import AccountProvider from '../context/account/accountContext'
 import { Client, Databases, Account, Query, Storage, Users } from 'node-appwrite'
+import removeAppwriteSecreatProperties from '@/components/Utility/removeAppwriteSecreatProperties'
 
 
-function removeUnnesseryProperties(object) {
 
-    const returnObject = {}
-    Object.entries(object).map(([key, value])=>{
-      if(!(key === '$permissions' || key ===  '$databaseId' || key ===  '$collectionId') ){
-        if(value instanceof Object)
-          returnObject[key] = removeUnnesseryProperties(value)
-        else if (value instanceof Array)
-        returnObject[key] = value.map(item => {
-          if(item instanceof Object){
-            return removeUnnesseryProperties(item)
-          } else {
-            return item
-          }
-        })
-        returnObject[key] = value
-      }
-      
-    })
-  return returnObject
-}
 
 async function getProperties() {  
   const        APPWRITE_URL = process.env.APPWRITE_URL
@@ -51,21 +32,12 @@ async function getProperties() {
 
   const data =  await databases.listDocuments(  DB_ID, PROPERTY_COLLECTION)
 
-    return data.documents.map(item => {
-      const returnObject = {}
-      Object.entries(item).map(([key, value])=>{
-        if(!(key === '$permissions' || key ===  '$databaseId' || key ===  '$collectionId') ){
-          returnObject[key] = value
-        }
-        
-      })
-    return returnObject
-    })
+    return data.documents.map(item => removeAppwriteSecreatProperties(item))
 }
 
 export default async function Home() {
   const data = await getProperties()
-  console.log(data)
+  // console.log(data)
   return (
     <>
       <AccountProvider>

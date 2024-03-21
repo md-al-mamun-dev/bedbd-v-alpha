@@ -280,8 +280,8 @@ export default async function Property({ params}) {
 // console.log(propertyRatingReview[0]['ratings'])
 // console.log(propertyRatingReview[0]['author'])
 
-const ratings = propertyRatingReview.map(item => item['ratings'])
-const review = propertyRatingReview.map(item => ({
+const ratings = propertyRatingReview?.map(item => item['ratings'])
+const review = propertyRatingReview?.map(item => ({
                                             reviewText: item['reviewText'], 
                                                 author: item['author'], 
                                           '$updatedAt': item['$updatedAt']}))

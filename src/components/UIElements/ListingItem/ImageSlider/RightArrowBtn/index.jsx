@@ -4,11 +4,15 @@ import { ChevronRight } from 'lucide-react'
 import LucidIcon from '@/components/LucidIcon'
 
 
-const RightArrowBtn = ({scrollHandlar}) => {
+const RightArrowBtn = ({ imageIndex,  changeImage ,  imageCount}) => {
+  function onRightArrowBtnClickHandlar(){
+    if(imageIndex< (imageCount+1)){
+        changeImage(imageIndex+1)
+    }
+}
 
-
-  return (<div className={`${styles.icon_container} ${styles.right_arrow_icon}`}>
-            <button onClick={()=>scrollHandlar('right')} className={` ${styles.icon_btn}`}>
+  return ((imageIndex < (imageCount-1)) && <div className={`${styles.icon_container} ${styles.right_arrow_icon}`}>
+            <button onClick={onRightArrowBtnClickHandlar} className={` ${styles.icon_btn}`}>
               <div className={` ${styles.icon_img_wrapper} `}>
                 <ChevronRight color="#ffffff" className=''/>
                 {/* <LucidIcon className={`${styles.filter_icon}`} color="#ffffff" name='chevron-right'/> */}
