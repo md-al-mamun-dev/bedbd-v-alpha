@@ -4,12 +4,9 @@ import Image from 'next/image'
 import ListingItem from '../UIElements/ListingItem'
 
 
+
 export default function ImageGallery({data}){
-
-console.log(data)
-  // console.log(data)
-
-  const galleryTitle = 'Top Rated Properties'
+  const galleryTitle = 'Properties'
 
 
 
@@ -18,7 +15,7 @@ console.log(data)
     <div className={`z-index-1 full-width-container position-relative  ${styles.listing_gallery_container}`}>
       <div className='horizontal-center w-fit-content'>
         {galleryTitle &&  <div className={`${styles.title_container}`}>
-                          <h2 className={``}>{galleryTitle}</h2>
+                          <h2>{galleryTitle}</h2>
                         </div>}
 
         <div className={`${styles.listing_gallery} `}>

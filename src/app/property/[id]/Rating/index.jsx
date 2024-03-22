@@ -16,7 +16,7 @@ function getRating(data) {
     }, {});
 
     for (let key in ratings) {
-    ratings[key] = Math.round(ratings[key] / data.length); 
+        ratings[key] = Math.round(ratings[key] / data.length);
     }
 
     let averageRating = 0;
