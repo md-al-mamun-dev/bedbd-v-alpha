@@ -1,16 +1,26 @@
 
 .hero_decorator_wrapper{
     display: none;
-    width: 377px;
-    height: 232px;
+    width: clamp(14.5rem, 5.4375rem + 22.6563vi, 23.5625rem);
+    /* width: 377px; */
+    /* height: 232px; */
+    height: clamp(8.75rem, 3rem + 14.375vi, 14.5rem);
+    /* width: 232px;
+    height: 140px; */
     position: absolute;
     z-index: 1;
     background: none;
-    top: -20px;
+    /* top: clamp(-8.75rem, 8.125rem + -21.0937vi, -0.3125rem); */
+    /* top: -5px; */
+    /* top: -15%; */
     /* top: -140.5px; */
-    left: 56.6%;
 
+    /* top: -7%; */
+    /* top: -20px; */
+    left: 56.6%;
 }
+
+
 .hero_title{
     /* max-width: 585px; */
     /* max-height: 112px; */
@@ -35,9 +45,14 @@
 }
 
 
+.hero_initial_section{
+    padding-left: 24px;
+    margin-right: 24px;
+    max-width: 100vw;
+    overflow: hidden;
+}
 
-
-._form{ display: flex; z-index: 3; }
+._form{ display: flex; z-index: 3; width: 100%; }
 .search_bar > form > .form_input{ display: flex; }
 .listing_types > div > div{
     cursor: pointer;
@@ -204,8 +219,11 @@
     }
 }
 @media (min-width:640px){
+    
     .hero_decorator_wrapper{
         display: block;
+        top: 20px;
+        left: 58%;
     }
     .heading{
         color: var(--clr-primary-400);        
@@ -218,6 +236,7 @@
         display: flex;
         align-items: center;
         gap: 15px;
+
         
     }
 
@@ -244,6 +263,30 @@
         font-weight: var(--fw-semi-bold);
         letter-spacing: 0.16px;
         color: #484848;
+    }
+}
+@media (min-width:768px){    
+    .hero_decorator_wrapper{
+
+        top: 10px;
+        left: 58%;
+    }
+}
+@media (min-width:992px){    
+    .hero_decorator_wrapper{
+        top: -5px;
+        left: 56%;
+    }
+}
+@media (min-width:1080px){    
+    .hero_decorator_wrapper{
+        left: 57%;
+    }
+}
+@media (min-width:1280px){    
+    .hero_decorator_wrapper{
+        top: -20px;
+        left: 57%;
     }
 }
 @media (min-width:640px){
@@ -372,6 +415,7 @@
     }    
 }
 @media (min-width:896px){
+    
     .heading{
         width: 90px;
     }

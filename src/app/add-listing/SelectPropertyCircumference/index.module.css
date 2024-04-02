@@ -1,0 +1,77 @@
+.heading{
+    color: var(--clr-primary-400);
+    font-size: var(--fs-875);
+    font-weight: var(--fw-regular-dark);
+    letter-spacing: 0.34px;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.scope_input{
+    /* border: 1px solid red; */
+    /* margin-top: 122px; */
+    width: fit-content;
+    /* margin: 122px auto 0px auto; */
+}
+.scope_input > .scope_info_question{
+    font-size: var(--fs-600);
+    font-weight: var(--fw-regular-dark);
+    line-height: var(--size-425);
+    letter-spacing: 0.44px;
+    color: var(--clr-neutral-600);
+    margin-bottom: var(--size-350);
+}
+.scope_input > .socps{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: var(--size-400);
+}
+.scope_input > .socps > .socpe_item{
+    max-width: 600px;
+    padding: 8px 20px 8px 56px;
+    border: 1px solid var(--clr-neutral-300);
+    border-radius: var(--size-100);
+    position: relative;
+    cursor: pointer;
+
+}
+
+.scope_input > .socps > .socpe_item > .icon{
+    position: absolute;
+    left: var(--size-310);
+    top: var(--size-080);
+}
+
+.scope_input > .socps > .socpe_item > .scope_title{
+    font-size: var(--fs-600);
+    font-weight: var(--fw-semi-bold);
+    line-height: var(--size-350);
+    color: var(--clr-neutral-600);
+    padding-bottom: var(--size-080);
+}
+
+.scope_input > .socps > .socpe_item > .details{
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular-dark);
+    line-height: var(--size-350);
+    color: var(--clr-neutral-500);
+    /* padding-bottom: var(--size-080); */
+}
+
+.scope_input > .add_more_btn{
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    gap: var(--size-080);
+    margin-top: var(--size-310);
+    font-size: var(--size-250);
+    font-weight: var(--fw-regular);
+    line-height: var(--size-335);
+    margin-bottom: var(--size-850) ;
+}
+
+
+

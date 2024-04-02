@@ -1,12 +1,15 @@
 import styles from './index.module.css'
 import Image from 'next/image'
+import SearchItem from './SearchItem'
+
 // import listingItem from '../UIElements/ListingItem'
-import ListingItem from '../UIElements/ListingItem'
+// import ListingItem from '../UIElements/ListingItem'
+// import 
 
 
 
-export default function ImageGallery({data}){
-  const galleryTitle = 'Top Rated Properties'
+export default function SearchGallery({data}){
+  const galleryTitle = 'Search Result'
 
   
   return (
@@ -28,11 +31,11 @@ export default function ImageGallery({data}){
             data.map(item => {
             return (<>
                   
-                  <ListingItem data={item}/><ListingItem data={item}/>
-                  <ListingItem data={item}/><ListingItem data={item}/>
-                  <ListingItem data={item}/><ListingItem data={item}/>
-                  <ListingItem data={item}/><ListingItem data={item}/>
-                  <ListingItem data={item}/><ListingItem data={item}/>
+                  <SearchItem data={item}/><SearchItem data={item}/>
+                  <SearchItem data={item}/><SearchItem data={item}/>
+                  <SearchItem data={item}/><SearchItem data={item}/>
+                  <SearchItem data={item}/><SearchItem data={item}/>
+                  <SearchItem data={item}/><SearchItem data={item}/>
             </>)})
           }
         </div>

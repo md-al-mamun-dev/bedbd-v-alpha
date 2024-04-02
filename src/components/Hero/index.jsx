@@ -9,30 +9,30 @@ import GuestCount from '../UIElements/GuestCount'
 import { useEffect, useRef,  useState } from 'react'
 
 
-const FilterSection = (props)=>{
-    const { filters } =  props
-    return (
-        <div className={` ${styles.filter_section} container`}>
-            <button className={`cursor-pointer ${styles.filter_btn} `}>
-                {/* <LucidIcon className={`${styles.filter_icon}`} name='filter' size={24}/> */}
+// const FilterSection = (props)=>{
+//     const { filters } =  props
+//     return (
+//         <div className={` ${styles.filter_section} container`}>
+//             <button className={`cursor-pointer ${styles.filter_btn} `}>
+//                 {/* <LucidIcon className={`${styles.filter_icon}`} name='filter' size={24}/> */}
 
-                <Filter className={`${styles.filter_icon}`} size={24}/>
-                {/* <LucidIcon className={`${styles.filter_icon}`} name='filter' size={24}/> */}
+//                 <Filter className={`${styles.filter_icon}`} size={24}/>
+//                 {/* <LucidIcon className={`${styles.filter_icon}`} name='filter' size={24}/> */}
 
-                Filter
-            </button>
-            <div className={`${styles.filters_list}`}>
-                <div className={`${styles.filter_item} ${styles.active} `}>All</div>
-                {
-                    filters.map( filter=> <div className={` ${styles.filter_item}`}>{filter}</div> )
-                }
-            </div>
-        </div>
-    )
-}
+//                 Filter
+//             </button>
+//             <div className={`${styles.filters_list}`}>
+//                 <div className={`${styles.filter_item} ${styles.active} `}>All</div>
+//                 {
+//                     filters.map( filter=> <div className={` ${styles.filter_item}`}>{filter}</div> )
+//                 }
+//             </div>
+//         </div>
+//     )
+// }
 
 
-const SearchFilter = (props) => {
+const Hero = (props) => {
     const filters = ['exclusive', 'nature', 'hill', 'sea-beach', 'home', 'room', 'cottage', 'exclusive', 'nature', 'hill', 'sea-beach', 'home', 'room', 'cottage', 'exclusive', 'nature', 'hill', 'sea-beach', 'home', 'room', 'cottage' ]
 
     const [location, setLoacation] = useState('')
@@ -138,16 +138,12 @@ const SearchFilter = (props) => {
 
 
 
-    
-    
-
     //   ${styles.md_container}   ${styles.container}
 
 
     return (
-        <>
-            <div className='w-100 hero z-index-999'>
-                <div className='marker-class w-fit-content margin-center'>
+            <div className='w-100 hero z-index-2 position-relative p-top-48px p-btm-48px'>
+                <div className='w-fit-content margin-center'>
                     <div className='position-relative'>
                         <div className={`${styles.hero_title} z-index-2 `}>
                             <h1>Start getting deals by choosing your <span className='clr-primary-400'>perfect place </span></h1>
@@ -158,7 +154,7 @@ const SearchFilter = (props) => {
                     </div>
                     <div className={` ${styles.find_listing}`}>
                             
-                        <div className={`${styles.hero_initial_section}`}>
+                        <div className={`${styles.hero_initial_section} `}>
                             <div className={`${styles.heading} uppercase`}>find</div>
                             <div className={` ${styles.scroller} ${styles.listing_types}`}>
                                 <div role='filter-list' className={` scroller__inner ${styles.scroller__inner} `}> 
@@ -199,7 +195,7 @@ const SearchFilter = (props) => {
                                     <CalendarDays className={`${styles.sm_icon}`}/>
                                 </div>
 
-                                <div className={`search-input ${styles.form_input} ${styles.form_input_check_in_out} `} onClick={CheckInOutClickHandlar}>{/* check-in */}
+                                <div className={`search-input ${styles.form_input} ${styles.form_input_check_in_out} `} onClick={CheckInOutClickHandlar}>
                                     <label className='capitalize'>check in-out</label>
                                     <input readOnly
                                         className={`check_in_out ${styles._date_input}`}
@@ -247,32 +243,8 @@ const SearchFilter = (props) => {
                 </div>
                            
             </div>
-
-
-            {/* <div className='hero position-relative z-index-2'> */}
-                    {/* <div className={`${styles.hero_title} z-index-2 `}>
-                        <h1>Start getting deals by choosing your <span>perfect place </span></h1>
-                    </div> */}
-                    {/* <div className={` ${styles.find_listing} marker-class`}>                        
-                        <div className={`${styles.hero_initial_section}`}>
-                            <div className={`${styles.heading} uppercase`}>find</div>
-                            <div className={` ${styles.scroller} ${styles.listing_types}`}>
-                                <div role='filter-list' className={` scroller__inner ${styles.scroller__inner} `}> 
-                                    <div className={`active capitalize w-max-content ${styles.active}`}>all </div>
-                                    <div className={`capitalize w-max-content`}> rooms</div> 
-                                    <div className={` capitalize w-max-content`}>apartment</div> 
-                                    <div className={`capitalize w-max-content`}>cabin</div> 
-                                    <div className={`capitalize w-max-content`}>home stay</div> 
-                                    <div className={`capitalize w-max-content`}>villas</div> 
-                                    <div className={`capitalize w-max-content`}>cottage</div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
-            {/* </div> */}
-            <FilterSection filters={filters}/>
-        </>        
+      
     )
 }
 
-export default SearchFilter
+export default Hero

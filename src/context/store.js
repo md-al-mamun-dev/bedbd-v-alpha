@@ -4,7 +4,9 @@ export const store = {
     registration:{},
     property:{  
         propertyTypes:[],
+        propertyCircumferences:[],
         bookingTypes:[],
+
         selectedBookingType:[],
 
         propertyFeatures:[],
@@ -55,4 +57,26 @@ export const store = {
             readTermsCondition:false
         }
     },
+    search:{
+        location:{
+            latitude:23.82439436458189,
+            longitude:90.36203892315308
+        },
+        dateRange:[],
+        guestCount: {
+            totalGuestCount: 0,
+            adult: 0,
+            child: 0,
+            pet: 0,
+            bellow12:0,
+        },
+        propertyType:'',
+        propertyFeatures:[],
+        areaRange:'',
+        priceRange: '',
+        rating: 0.00,
+        amenities: [],
+        badges:[],
+        genderPreference:'',
+    }
 };

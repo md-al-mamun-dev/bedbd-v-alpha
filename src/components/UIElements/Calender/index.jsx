@@ -66,7 +66,7 @@ const SelectDateHandlar = debounce((clickedDate)=>{
 
 
   return (
-    <div ref={calenderRef} className={`${styles.calender} z-index-5 ${showCalender ? 'display-block' : 'display-none'}`}>
+    <div ref={calenderRef} className={`${styles.calender} z-index-12 bg-neutral-000 ${showCalender ? 'display-block' : 'display-none'}`}>
         <div className={`${styles.calender_container} `}>
             <div className={`${styles.calender_title} `}>
                 <h2 >Select Date</h2>

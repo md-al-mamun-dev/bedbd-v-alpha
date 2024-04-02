@@ -12,6 +12,8 @@ const conf = {
                    verificationDocumentTypeCollectionId: String(process.env.NEXT_PUBLIC_APPWRITE_USER_VERFIFICATION_DOC_TYPE_COLLECTION_ID),
                                propertyTypeCollectionId: String(process.env.NEXT_PUBLIC_APPWRITE_PROPERTY_TYPE_COLLECTION_ID),
 
+                     propertyCircumferencesCollectionId: String(process.env.NEXT_PUBLIC_APPWRITE_PROPERTY_CIRCUMFERENCES_COLLECTION_ID),
+
                appwriteUserVerificationInfoCollectionId: String(process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_USER_VERFIFICATION_INFO_COLLECTION_ID),
                            propertyFeaturesCollectionId: String(process.env.NEXT_PUBLIC_APPWRITE_PROPERTY_FEATURES_COLLECTION_ID),
                                   amenitiesCollectionId: String(process.env.NEXT_PUBLIC_APPWRITE_AMENITIES_COLLECTION_ID),
@@ -20,6 +22,8 @@ const conf = {
                                   propertyCollectionId: String(process.env.APPWRITE_DB_COLLECTION_PROPERTY_ID),
 
                                   propertyBookingTypesId: String(process.env.NEXT_PUBLIC_APPWRITE_PROPERTY_BOOKING_TYPE_COLLECTION_ID),
+
+                                  // propertyRatingReviewId: String(APPWRITE_DB_COLLECTION_RATING_REVIEW_ID)
 
 
                                   
