@@ -7,9 +7,15 @@ import SearchFilter from '@/components/SearchFilter'
 import ListingGallery from '@/components/ListingGallery'
 import UserEntrance from '@/components/UIElements/UserEntrance/PhoneInput'
 import AccountProvider from '../context/account/accountContext'
+import LocationProvider from '@/context/search/searchContext'
+import Hero from '@/components/Hero'
+// import Hero from '@/components/Hero'
 import { Client, Databases, Account, Query, Storage, Users } from 'node-appwrite'
 import removeAppwriteSecreatProperties from '@/components/Utility/removeAppwriteSecreatProperties'
-
+import SearchGallery from '@/components/SearchGallery'
+import SearchBar from '@/components/SearchBar'
+import SearchMap from '@/components/SearchMap'
+import MapboxMap from '@/components/MapboxMap'
 
 
 // async function getRatingReviews(propertyId) {
@@ -18,7 +24,6 @@ import removeAppwriteSecreatProperties from '@/components/Utility/removeAppwrite
 //   const                API_KEY = process.env.APPWRITE_BACKEND_API_KEY
 //   const                  DB_ID = process.env.APPWRITE_DB_BEDBD_ID
 //   const PROPERTY_RATING_REVIEW = process.env.APPWRITE_DB_COLLECTION_RATING_REVIEW_ID
-
   
 //   const client = new Client();
 //       client
@@ -110,10 +115,23 @@ export default async function Home() {
       <AccountProvider>
         <Header/>
       </AccountProvider>
-      <div className={`w-100 z-index-1 `}>
-          <SearchFilter />
-          <ListingGallery data={data}/>
+      {/* <Hero/> */}
+
+      <div className='w-100 flex container'>
+        <LocationProvider>
+          <SearchBar/>
+          <div className='w-100'>
+            {/* <MapboxMap/> */}
+              <SearchMap />            
+            {/* <Hero/> */}
+            {/* <SearchFilter /> */}
+            <SearchGallery data={data}/>
+            <ListingGallery data={data}/>
+        </div>
+        </LocationProvider>
+        
       </div>
+      
       <Footer/>
     </>
     

@@ -1,0 +1,23 @@
+.icon_container{
+    position: absolute;
+}
+
+.icon_btn{
+    cursor: pointer;
+    border: none;
+    background: var(--clr-neutral-800-a_50);
+    border-radius: 2px;
+    padding: 4px;
+}
+
+.icon_img_wrapper{
+    position: relative;
+    height:clamp(1.25rem, 0.4776rem + 1.278vw, 1.5rem);
+    width: clamp(1.25rem, 0.4776rem + 1.278vw, 1.5rem);
+}
+
+.left_arrow_icon{
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,99 @@
+
+
+.month{
+    display: grid;
+    /* border: 1px solid red; */
+
+}
+
+.month_title{
+    font-size: var(--fs-400);
+    color: var(--clr-neutral-400);
+    line-height: var(--fs-650);
+    font-weight: var(--fw-regular-dark);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--size-150);
+}
+
+.week_name{
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    /* grid-template-rows: repeat(3, auto); */
+    font-size: var(--fs-300);
+    font-weight: var(--fw-regular);
+    color: var(--clr-secondary-400);
+}
+
+.days_name{
+    display: grid;
+    row-gap: 5px;
+    grid-template-columns: repeat(7, auto);
+    /* grid-template-rows: repeat(3, auto); */
+    font-size: var(--fs-300);
+    font-weight: var(--fw-regular-dark);
+}
+
+.week_name > *{
+    /* padding-top: var(--size-060); */
+    padding-bottom: var(--size-060);
+    padding-left: var(--size-300);
+    padding-right: var(--size-300);
+    text-align: center;
+}
+
+
+
+.days_name > *{
+    padding-top: var(--size-025);
+    padding-bottom: var(--size-025);
+
+    padding-left: var(--size-300);
+    padding-right: var(--size-300);
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+
+.week_name > *:first-child,
+.days_name > *:first-child,
+.days_name > *:nth-child(8),
+.days_name > *:nth-child(15),
+.days_name > *:nth-child(22),
+.days_name > *:nth-child(29),
+.days_name > *:nth-child(36){
+    padding-left: var(--size-100);
+    /* border: 1px solid red; */
+}
+
+
+.week_name > *:last-child,
+.days_name > *:nth-child(7),
+.days_name > *:nth-child(14),
+.days_name > *:nth-child(21),
+.days_name > *:nth-child(28),
+.days_name > *:nth-child(35),
+.days_name > *:nth-child(42){
+    padding-right: var(--size-100);
+    /* border: 1px solid red; */
+}
+
+.days_name > .inactive{
+    color: var(--clr-neutral-150) ;
+}
+
+.today{
+    color: var(--clr-secondary-400);
+}
+.selectedDate{}
+.days_name > *:not(.inactive){
+    cursor: pointer;
+}
+.days_name > *:hover:not(.inactive){
+    background: var(--clr-secondary-400);
+    color: white;
+}
+
+.days_name > *:hover:not(.inactive):not(.selectedDate){
+    border-radius: 13px;
+}

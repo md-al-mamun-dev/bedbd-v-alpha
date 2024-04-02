@@ -6,20 +6,21 @@ export class PropertyService{
     databases;
     bedbdDbId;
     propertyTypesCollection;
-    propertyAmenitiesCollection
-    homeRulesCollection
+    propertyAmenitiesCollection;
+    homeRulesCollection;
+    propertyCircumstance;
+
     // termsConditionCollectionId
     constructor(){
         this.databases                     = new Databases(appwriteClient)
         this.bedbdDbId                     = conf.appwriteBedbdDatabaseId
-        this.propertyCollection           = conf.propertyCollectionId
-
+        this.propertyCollection            = conf.propertyCollectionId
         this.propertyTypesCollection       = conf.propertyTypeCollectionId
         this.propertyFeaturesCollection    = conf.propertyFeaturesCollectionId
         this.amenitiesCollection           = conf.amenitiesCollectionId
         this.homeRulesCollection           = conf.homeRulesCollectionId
-
-        this.propertyBookingTypes           = conf.propertyBookingTypesId
+        this.propertyBookingTypes          = conf.propertyBookingTypesId
+        this.propertyCircumferences        = conf.propertyCircumferencesCollectionId
     }
 
     async getLocationData(id){
@@ -148,6 +149,23 @@ export class PropertyService{
                                            title: i['title'],                                  
                                      description: i['description'],
                                   apartmentTypes: i['apartmentTypes']}))
+            // return data   
+        } catch (err) {
+            return false
+        }
+    }
+    async getPropertyCircumferences(){
+        // console.log('get-property-feature')
+        try {
+            const data =  await this.databases
+                                    .listDocuments(
+                                        this.bedbdDbId,
+                                        this.propertyCircumferences)
+
+            return data['documents']
+                        .map(i=> ({           id: i['$id'],
+                                           title: i['title'],                                  
+                                     description: i['description']}))
             // return data   
         } catch (err) {
             return false

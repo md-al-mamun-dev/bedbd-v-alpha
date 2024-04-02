@@ -14,6 +14,14 @@ export default function propertyReducers(initialData, {type, data}) {
             return { ...initialData, propertyTypes:data }
         }
 
+        case 'property/circumferences':{
+            return { 
+                            ...initialData, 
+                    propertyCircumferences: data 
+                    
+                }
+        }
+
         // Booking Type
         case 'property/bookingTypes':{
             return { ...initialData, bookingTypes:data }
@@ -159,38 +167,6 @@ export default function propertyReducers(initialData, {type, data}) {
             return { ...initialData, termsConditions:data }
         }
 
-        // selectedAmenities
-        // amenities
-
-        // case 'update-preferences':{
-        //     return {
-        //         ...initialData,
-        //         prefs:{  
-        //             ...initialData['prefs'],
-        //             ...data
-        //             }, 
-        //         }
-        // }
-        
-        // case 'update-user-pref':{
-        //     return { 
-        //             ...initialData, 
-        //                    ...data,
-        //             prefs: {
-        //                 ...initialData['prefs'],
-        //                 ...data['prefs']
-        //             }                        
-        //         }
-        // }
-        // case "update": {
-        //     return tasks.map(t => {
-        //       if (t.id === action.task.id) {
-        //         return action.task;
-        //       } else {
-        //         return t;
-        //       }
-        //     });
-        //   }
         case "logout": {
             return {}
         }
